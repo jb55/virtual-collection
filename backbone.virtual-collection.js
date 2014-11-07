@@ -8,8 +8,6 @@
       root.VirtualCollection = Backbone.VirtualCollection;
     });
   } else if (typeof exports !== 'undefined') {
-    var Backbone = require('backbone');
-    var _ = require('underscore');
     module.exports = factory(root, Backbone, _);
   } else {
     root.Backbone.VirtualCollection = factory(root, root.Backbone, root._);
