@@ -80,7 +80,7 @@
     },
 
     _onAdd: function (model, collection, options) {
-      if (this.accepts(model, options.index)) {
+      if (this.accepts(model, options && options.index)) {
         this._indexAdd(model);
         model.on('all', this._onModelEvent, this);
         this.trigger('add', model, this, options);
